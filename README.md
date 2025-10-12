@@ -183,7 +183,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔗 Links
 
-- **Live Demo**: [View the deployed application](https://dc-comic-cover-generator-lm8kmroee.vercel.app)
+- **Live Demo**: [View the deployed application](https://dc-comic-cover-generator.vercel.app/)
 - **Replicate Model**: `resilientcoders/calvin-comic-cover`
 - **Documentation**: [Next.js Docs](https://nextjs.org/docs)
 - **Replicate API**: [Replicate Documentation](https://replicate.com/docs)
