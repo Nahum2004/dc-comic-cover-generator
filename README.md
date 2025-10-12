@@ -26,7 +26,7 @@ The DC Comic Cover Generator is a web application that transforms text prompts i
 - **Frontend**: Next.js 15 with App Router
 - **Language**: TypeScript 5.0
 - **Styling**: CSS Modules with custom styling
-- **AI API**: Replicate API with custom LoRA model
+- **AI API**: Replicate API with custom LoRA model + Stable Diffusion 1.5
 - **Deployment**: Vercel (serverless)
 - **Package Manager**: npm
 
