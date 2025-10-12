@@ -21,6 +21,12 @@ The DC Comic Cover Generator is a web application that transforms text prompts i
 - **🔍 Comprehensive Logging**: Detailed diagnostic logging for debugging
 - **🌐 Production Ready**: Deployed on Vercel with automatic scaling
 
+## 🖼️ Screenshots
+
+![DC Comic Cover Generator UI](https://github.com/CodingWCal/dc-comic-cover-generator/blob/main/Screenshot%202025-10-12%20002101.png)
+![AI-Generated Comic Cover Result](https://github.com/CodingWCal/dc-comic-cover-generator/blob/main/Screenshot%202025-10-12%20001526.png)
+
+
 ## 🛠️ Tech Stack
 
 - **Frontend**: Next.js 15 with App Router
