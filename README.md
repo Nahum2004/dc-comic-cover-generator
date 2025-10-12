@@ -1,48 +1,40 @@
 # 🎨 DC Comic Cover Generator
 
-A Next.js 15 application that generates custom DC comic-style cover art using AI. Simply enter a creative prompt and watch as the app creates stunning vintage comic book covers powered by Replicate's API and a fine-tuned LoRA model.
+A Next.js application that generates custom DC comic-style cover art using AI. Simply enter a creative prompt and watch as the app creates stunning vintage comic book covers powered by Replicate's API and a fine-tuned LoRA model.
 
-![DC Comic Cover Generator](https://img.shields.io/badge/Next.js-15.5.4-black?style=for-the-badge&logo=next.js)
+![Next.js](https://img.shields.io/badge/Next.js-15.5.4-black?style=for-the-badge&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
 ![Replicate API](https://img.shields.io/badge/Replicate-API-orange?style=for-the-badge)
+![Vercel](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel)
 
-## 📋 Overview
+## 📋 Project Overview
 
-The DC Comic Cover Generator is a web application that transforms text prompts into professional-looking comic book covers. Built with Next.js 15 and powered by Replicate's AI API, it uses a custom fine-tuned LoRA model to generate images that capture the essence of classic DC comic book aesthetics.
-
-### 🛠️ Tech Stack
-
-- **Frontend**: Next.js 15 with App Router
-- **Language**: TypeScript
-- **Styling**: Inline CSS with modern design
-- **AI Integration**: Replicate API
-- **Model**: Custom fine-tuned LoRA model (`resilientcoders/calvin-comic-cover`)
-- **Image Processing**: Binary data handling and WebP format support
+The DC Comic Cover Generator is a web application that transforms text prompts into professional-looking comic book covers. Built with Next.js 15 and powered by Replicate's AI API, it uses a custom fine-tuned LoRA model (`resilientcoders/calvin-comic-cover`) to generate images that capture the essence of classic DC comic book aesthetics.
 
 ## ✨ Features
 
-- 🎯 **Intuitive Prompt Interface**: Simple text input with placeholder examples
-- 🚀 **Real-time Image Generation**: Fast AI-powered comic cover creation
-- 🎨 **DC Comic Style**: Authentic vintage comic book aesthetic
-- 📱 **Responsive Design**: Works seamlessly on desktop and mobile
-- ⚡ **Error Handling**: Comprehensive error messages and loading states
-- 🖼️ **High-Quality Output**: Generates crisp WebP images (70-100KB)
-- 🔄 **File-based Storage**: Images saved locally for optimal performance
-- 🎭 **Trigger Word Support**: Use "dccomic" in prompts for best results
+- **🎯 AI-Powered Generation**: Creates custom comic book covers from text prompts
+- **🔤 Smart Prompting**: Uses the `dccomic` trigger word for optimal results
+- **📱 Responsive Design**: Works seamlessly on desktop and mobile devices
+- **⚡ Stateless Architecture**: Fully serverless deployment with no file system dependencies
+- **🛡️ Type-Safe**: Built with TypeScript for robust error handling
+- **🔍 Comprehensive Logging**: Detailed diagnostic logging for debugging
+- **🌐 Production Ready**: Deployed on Vercel with automatic scaling
 
-## 🚀 Installation
+## 🛠️ Tech Stack
 
-### Prerequisites
+- **Frontend**: Next.js 15 with App Router
+- **Language**: TypeScript 5.0
+- **Styling**: CSS Modules with custom styling
+- **AI API**: Replicate API with custom LoRA model
+- **Deployment**: Vercel (serverless)
+- **Package Manager**: npm
 
-- Node.js 18+ 
-- npm or yarn
-- Replicate API account and token
-
-### Setup Steps
+## 🔧 Environment Setup
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
+   git clone <repository-url>
    cd comic-cover-app
    ```
 
@@ -51,106 +43,71 @@ The DC Comic Cover Generator is a web application that transforms text prompts i
    npm install
    ```
 
-3. **Set up environment variables**
-   
+3. **Create environment file**
    Create a `.env.local` file in the root directory:
-   ```bash
-   touch .env.local
-   ```
-   
-   Add your Replicate API token:
    ```env
-   REPLICATE_API_TOKEN=your_replicate_token_here
+   REPLICATE_API_TOKEN=your_replicate_api_token_here
    ```
 
 4. **Get your Replicate API token**
    - Sign up at [replicate.com](https://replicate.com)
-   - Go to your account settings
+   - Navigate to your account settings
    - Generate a new API token
-   - Copy the token (starts with `r8_`)
+   - Copy the token to your `.env.local` file
 
-## 🎮 Usage
+## 🚀 Running Locally
 
-### Development Server
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Generating Comic Covers
-
-1. **Enter a creative prompt** in the input field
-2. **Include the trigger word** `dccomic` for best results
-3. **Click "Generate Cover"** and wait for the magic to happen
-4. **View your generated comic cover** below the input
-
-### Example Prompts
-
-```
-dccomic superman flying above city sunset
-dccomic batman crouched menacingly on top of a tall building at night with the full moon behind
-dccomic Wonder Woman fighting villains with lightning in the background
-dccomic The Flash running through a futuristic cityscape
-```
-
-### Tips for Best Results
-
-- Always include `dccomic` at the beginning of your prompt
-- Be descriptive about the scene, characters, and mood
-- Mention lighting conditions (sunset, night, dramatic lighting)
-- Include environmental details (city, building, sky, etc.)
-
-## 🚀 Deployment
-
-### Deploy on Vercel (Recommended)
-
-1. **Push your code to GitHub**
+1. **Start the development server**
    ```bash
-   git add .
-   git commit -m "Initial commit"
-   git push origin main
+   npm run dev
    ```
 
-2. **Deploy to Vercel**
-   - Go to [vercel.com](https://vercel.com)
-   - Import your GitHub repository
-   - Add your environment variable:
-     - Name: `REPLICATE_API_TOKEN`
-     - Value: `your_replicate_token_here`
-   - Click "Deploy"
+2. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-3. **Your app will be live** at `https://your-app-name.vercel.app`
+3. **Generate your first cover**
+   - Enter a creative prompt (e.g., "superman flying over metropolis")
+   - The app automatically prepends `dccomic` for optimal results
+   - Wait for the AI to generate your custom comic cover
 
-### Alternative Deployment Options
+## 🌐 Deployment
 
-- **Netlify**: Similar process with environment variables
-- **Railway**: Supports Node.js apps with easy deployment
-- **DigitalOcean App Platform**: Full-stack deployment solution
+This application is designed for **stateless deployment** on Vercel:
 
-## 🔧 Environment Variables
+- **No file system writes**: Images are returned as base64 data URLs
+- **Serverless architecture**: Scales automatically with demand
+- **Zero configuration**: Deploys directly from GitHub
 
-Create a `.env.local` file in your project root with the following variables:
+### Deploy to Vercel
 
-```env
-# Replicate API Configuration
-REPLICATE_API_TOKEN=r8_your_token_here
+1. **Connect your repository** to Vercel
+2. **Set environment variables** in Vercel dashboard:
+   - `REPLICATE_API_TOKEN`: Your Replicate API token
+3. **Deploy**: Vercel automatically builds and deploys your app
 
-# Optional: Next.js Configuration
-NEXT_PUBLIC_APP_URL=http://localhost:3000
+### Manual Deployment
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy to production
+vercel --prod
 ```
 
-### Environment Variable Details
+## 🎨 Usage Examples
 
-| Variable | Description | Required | Example |
-|----------|-------------|----------|---------|
-| `REPLICATE_API_TOKEN` | Your Replicate API authentication token | ✅ Yes | `r8_Ezmyb97URNSPV23ylY4R2xBBdaAv4SC2CqVAz` |
-| `NEXT_PUBLIC_APP_URL` | Base URL for your application | ❌ No | `https://your-app.vercel.app` |
+Try these prompts for best results:
 
-## 🏗️ Project Structure
+- `superman flying over metropolis at sunset`
+- `batman crouched on gotham city rooftops`
+- `wonder woman defending themyscira`
+- `flash running through central city`
+- `green lantern creating constructs in space`
+
+**Note**: The app automatically prepends `dccomic` to your prompt for optimal model performance.
+
+## 📁 Project Structure
 
 ```
 comic-cover-app/
@@ -159,11 +116,10 @@ comic-cover-app/
 │   │   └── generate/
 │   │       └── route.ts          # API endpoint for image generation
 │   ├── globals.css               # Global styles
-│   ├── layout.tsx                # Root layout component
+│   ├── layout.tsx                # Root layout with metadata
 │   └── page.tsx                  # Main application page
-├── public/
-│   └── images/                   # Generated images storage
-├── .env.local                    # Environment variables
+├── public/                       # Static assets
+├── .env.local                    # Environment variables (not tracked)
 ├── next.config.ts                # Next.js configuration
 ├── package.json                  # Dependencies and scripts
 └── README.md                     # This file
@@ -173,48 +129,37 @@ comic-cover-app/
 
 ### POST `/api/generate`
 
-Generates a comic cover image from a text prompt.
+Generates a comic book cover from a text prompt.
 
 **Request Body:**
 ```json
 {
-  "prompt": "dccomic superman flying above city sunset"
+  "prompt": "superman flying over city"
 }
 ```
 
 **Response:**
 ```json
 {
-  "imageUrl": "/images/generated-1760239678229.webp"
+  "imageUrl": "data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAA..."
 }
 ```
 
-## 🎨 Customization
+## 🛡️ Error Handling
 
-### Styling
-The app uses inline CSS for styling. You can customize the appearance by modifying the `style` props in `app/page.tsx`.
+The application includes comprehensive error handling:
 
-### Model Configuration
-The current model is `resilientcoders/calvin-comic-cover:5e26874f460dbb4e0a13e468d9c6e6bebcaf91962a78eea2b88e96bd3d4c9fef`. You can change this in `app/api/generate/route.ts`.
+- **API Token Validation**: Ensures Replicate API token is configured
+- **Input Validation**: Validates prompt input
+- **Network Error Handling**: Graceful handling of API failures
+- **Detailed Logging**: Extensive diagnostic logging for debugging
 
-## 🐛 Troubleshooting
+## 📊 Performance
 
-### Common Issues
-
-**"API token not configured" error:**
-- Ensure your `.env.local` file exists in the project root
-- Verify the token starts with `r8_`
-- Restart your development server after adding the token
-
-**Images not displaying:**
-- Check that the `public/images/` directory exists
-- Verify file permissions
-- Clear browser cache
-
-**Generation fails:**
-- Ensure your Replicate account has sufficient credits
-- Check your internet connection
-- Verify the model is accessible
+- **Fast Generation**: Optimized for quick image generation
+- **Efficient Rendering**: Base64 data URLs for instant display
+- **Minimal Bundle**: Optimized build with tree shaking
+- **CDN Delivery**: Vercel's global CDN for fast loading
 
 ## 🤝 Contributing
 
@@ -230,19 +175,18 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Credits
 
-- **Replicate API** - For providing the AI image generation infrastructure
-- **Next.js Team** - For the amazing React framework
-- **DC Comics** - For the iconic comic book aesthetic inspiration
-- **LoRA Model Creator** - For the fine-tuned comic cover model
+- **AI Model**: Fine-tuned LoRA model trained under the Resilient Coders AI Fellowship
+- **Model Training**: Custom training on DC comic book cover dataset
+- **API**: Powered by [Replicate](https://replicate.com)
+- **Framework**: Built with [Next.js](https://nextjs.org)
+- **Deployment**: Hosted on [Vercel](https://vercel.com)
 
-## 📞 Support
+## 🔗 Links
 
-If you encounter any issues or have questions:
-
-1. Check the [troubleshooting section](#-troubleshooting)
-2. Open an issue on GitHub
-3. Contact the development team
+- **Live Demo**: [View the deployed application](https://dc-comic-cover-generator-lm8kmroee.vercel.app)
+- **Replicate Model**: `resilientcoders/calvin-comic-cover`
+- **Documentation**: [Next.js Docs](https://nextjs.org/docs)
+- **Replicate API**: [Replicate Documentation](https://replicate.com/docs)
 
 ---
 
-**Made with ❤️ for comic book enthusiasts and AI art lovers**
